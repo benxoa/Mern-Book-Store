@@ -15,7 +15,7 @@ app.use(express.json());
   
 
 const _dirname = path.resolve();
-const buildpath = path.join(_dirname, "client", "dist");
+const buildpath = path.join(_dirname, "../client/dist");
 app.use(express.static(buildpath));
 
 app.use(cors({ origin: "*", credentials: true }));
