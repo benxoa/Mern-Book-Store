@@ -36,7 +36,7 @@ const Login = () => {
     e.preventDefault();
     loadingBar.current && loadingBar.current.continuousStart();
     try {
-      const res = await fetch("http://localhost:3000/api/login", {
+      const res = await fetch("http://47.236.9.48:3000/login", {
         method: "POST",
         credentials: "include",
         body: JSON.stringify({
