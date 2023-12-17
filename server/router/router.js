@@ -7,10 +7,18 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cookieParser = require('cookie-parser')
 const validateToken = require('../Middleware/verify')
+const path = require('path');
 
 
-router.use(cors({ origin: "http://localhost:5173", credentials: true }));
+const _dirname = path.resolve();
+const buildpath = path.join(_dirname, "../client/dist");
+router.use(express.static(buildpath));
+router.use(cors({ origin: "*", credentials: true }));
 router.use(cookieParser());
+
+// router.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+// });
 
 
 router.post("/book-upload", async (req, res) => {

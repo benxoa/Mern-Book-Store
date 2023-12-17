@@ -62,9 +62,13 @@ const Login = () => {
           history(`/`);
         }, 1000);
       } else if (res.status === 403 || res.status === 404) {
-        console.error("Invalid Email or Password");
+        toast.error("Invalid email or password!", {
+          style: customToastStyle,
+        });
       } else {
-        console.error("Something Went Wrong");
+        toast.error("Something Went Wrong", {
+          style: customToastStyle,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
