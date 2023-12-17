@@ -11,7 +11,7 @@ const path = require('path');
 app.use(express.json());
 
 
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors({credentials: true }));
 app.use(cookieParser());
 app.use(router);
 const _dirname = path.resolve();

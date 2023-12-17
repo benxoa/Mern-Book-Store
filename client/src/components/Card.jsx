@@ -9,7 +9,7 @@ const Card = () => {
     try {
       const res = await axios.get("http://localhost:3000/book");
       const data = res.data;
-      setBooks(data); // Update state with fetched data
+      setBooks(data); 
     } catch (error) {
       console.log(error);
     }

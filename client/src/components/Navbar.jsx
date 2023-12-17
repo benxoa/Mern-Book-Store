@@ -26,11 +26,11 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link
-            style={{ fontSize: "1.4rem", fontWeight: "bold" }}
+            style={{ fontSize: "1.7rem", fontWeight: "bold", color: "#3498db", fontFamily: "Misto" }}
             className="navbar-brand"
             to="/"
           >
-            myBook
+            MYBOOK
           </Link>
           <button
             className="navbar-toggler"

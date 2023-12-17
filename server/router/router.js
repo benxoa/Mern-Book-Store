@@ -13,7 +13,7 @@ const path = require('path');
 const _dirname = path.resolve();
 const buildpath = path.join(_dirname, "../client/dist");
 router.use(express.static(buildpath));
-router.use(cors({ origin: "*", credentials: true }));
+router.use(cors({credentials: true }));
 router.use(cookieParser());
 
 // router.get('*', (req, res) => {
