@@ -9,6 +9,10 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 
 app.use(express.json());
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(_dirname, 'client', 'dist', 'index.html'));
+//   });
+  
 
 const _dirname = path.resolve();
 const buildpath = path.join(_dirname, "client", "dist");
